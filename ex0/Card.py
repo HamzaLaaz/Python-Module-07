@@ -23,4 +23,6 @@ class Card(ABC):
         return card_info
 
     def is_playable(self, available_mana: int) -> bool:
+        if not isinstance(available_mana, int):
+            raise ValueError("mana must be integer")
         return available_mana >= self.cost
