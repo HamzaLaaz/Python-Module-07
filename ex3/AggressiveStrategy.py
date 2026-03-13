@@ -48,8 +48,3 @@ class AggressiveStrategy(GameStrategy):
 
     def get_card_cost(self, card: Card) -> int:
         return card.cost
-
-    def is_player_target(self, target) -> int:
-        if "Player" in str(target):
-            return 0
-        return 1
